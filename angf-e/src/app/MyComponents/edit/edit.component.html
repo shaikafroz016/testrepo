@@ -1,0 +1,18 @@
+
+<p>update details</p>
+<form (ngSubmit)="submit()">
+  <div class="form-group">
+    <label for="lob">lobCategoryName</label>
+    <input type="text" class="form-control" id="lob" name="lob"   [(ngModel)]="item.lobCategoryName">
+    
+  </div>
+  <div class="form-group">
+    <label for="upd">Updated by</label>
+    <input type="text" class="form-control" id="upd" name="upd" [(ngModel)]="item.updatedBy">
+  </div>
+  <div class="form-check"> 
+    <input type="checkbox" [checked]="item.isActive" (change)="item.isActive = !item.isActive">
+    <label class="form-check-label" for="act">Active</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

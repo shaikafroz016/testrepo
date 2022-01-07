@@ -1,0 +1,17 @@
+<p>show-compo works!</p>
+<a href="#" routerLink="/Lobcat/create/" class="btn btn-success">Create New Post</a>
+<div *ngFor="let s of homels">
+    
+    
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{s.id}}</h5>
+          <p class="card-text">{{s.lobCategoryName}}</p>
+          <p>Created by {{s.createdBy}}</p>
+          <p>Updated by {{s.updatedBy}}</p>
+          <a href="#" [routerLink]="['/Lobcat/', s.id, 'view']" class="btn btn-info">View</a>
+          <a href="#" [routerLink]="['/Lobcat/',s.id,'edit']" class="btn btn-primary">edit</a>
+         <button type="submit" (click)="deletelob(s.id)" class="btn btn-danger">Delete</button>
+        </div>
+      </div>
+</div>
