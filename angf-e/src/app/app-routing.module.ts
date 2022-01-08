@@ -3,12 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './MyComponents/about/about.component';
 import { ContactComponent } from './MyComponents/contact/contact.component';
 import { EditComponent } from './MyComponents/edit/edit.component';
+import { HomeComponent } from './MyComponents/home/home.component';
 import { AddEdiCompoComponent } from './MyComponents/Homemodel/add-edi-compo/add-edi-compo.component';
 import { ShowCompoComponent } from './MyComponents/Homemodel/show-compo/show-compo.component';
 import { ShowDetailsComponent } from './MyComponents/show-details/show-details.component';
 
 const routes: Routes = [
-  {path:"",redirectTo: 'Lobcat', pathMatch: 'full'},
+  {path:"",redirectTo: 'Home', pathMatch: 'full'},
+  {path:"Home",component:HomeComponent},
   {path:"Lobcat",component:ShowCompoComponent},
   {path:"Lobcat/:LobcatId/view",component:ShowDetailsComponent},
   {path:"Lobcat/create",component:AddEdiCompoComponent},
