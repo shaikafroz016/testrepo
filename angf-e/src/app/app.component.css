@@ -57,6 +57,7 @@ p{
   display: flex;
   position: fixed;
   top: 0px;
+  z-index: 500;
 }
 
 .wrapper .top_navbar .hamburger{

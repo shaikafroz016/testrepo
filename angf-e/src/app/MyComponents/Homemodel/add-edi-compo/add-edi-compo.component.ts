@@ -22,7 +22,8 @@ export class AddEdiCompoComponent implements OnInit {
     const hom={
       lobCategoryName:this.lob,
       createdBy:this.cre,
-      updatedBy:''
+      updatedBy:'',
+      isActive:true
     }
     console.log(hom)
     this.service.addHome(hom).subscribe(res => {
@@ -35,5 +36,5 @@ interface home {
   lobCategoryName: string;
   createdBy: string;
   updatedBy: string;
-  
+  isActive:boolean
 }

@@ -24,7 +24,7 @@ deletelob(id:number){
   
   this.service.deleteHome(id).subscribe(res => {
     console.log('deletes  successfully!');
-    location.reload();
+    this.refreshHomeLs();
   })
 }
 
