@@ -136,6 +136,7 @@ p{
   position: fixed;
   top: 50px;
   left: 0px;
+  z-index: 500;
   background: #57574e;
   width: 100px;
   height: calc(100% - 50px);

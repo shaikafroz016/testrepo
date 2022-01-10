@@ -12,9 +12,9 @@ const routes: Routes = [
   {path:"",redirectTo: 'Home', pathMatch: 'full'},
   {path:"Home",component:HomeComponent},
   {path:"Lobcat",component:ShowCompoComponent},
-  {path:"Lobcat/:LobcatId/view",component:ShowDetailsComponent},
-  {path:"Lobcat/create",component:AddEdiCompoComponent},
-  {path:"Lobcat/:LobcatId/edit",component:EditComponent},
+  {path:"Lobcat/:LobcatId/view",component:ShowDetailsComponent,data: { animation: 'isRight' }},
+  {path:"Lobcat/create",component:AddEdiCompoComponent,data: { animation: 'isLeft' }},
+  {path:"Lobcat/:LobcatId/edit",component:EditComponent,data: { animation: 'isRight' }},
   {path:"about",component:AboutComponent},
   {path:"contact",component:ContactComponent}
 ];

@@ -11,6 +11,8 @@ import { NetApiService } from './net-api.service';
 import { ShowDetailsComponent } from './MyComponents/show-details/show-details.component';
 import { EditComponent } from './MyComponents/edit/edit.component';
 import { HomeComponent } from './MyComponents/home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { HomeComponent } from './MyComponents/home/home.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
