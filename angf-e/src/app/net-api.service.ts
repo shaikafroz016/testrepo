@@ -23,12 +23,10 @@ export class NetApiService {
      //return this.http.post(this.netapiUrl+`/values`,data);
    //}
    addHome(data:home) {
+    //return this.http.post(this.netapiUrl + `/LobCategories`, JSON.stringify(data), this.httpOptions)
+    return this.http.post(this.netapiUrl + `/LobCategories`, data)
+   }  
 
-    return this.http.post(this.netapiUrl + `/LobCategories`, JSON.stringify(data), this.httpOptions)
-
-    
-    
-  }  
    updateHome(data:any,id:number){
     return this.http.put(this.netapiUrl +`/LobCategories/${id}`,data);
    }

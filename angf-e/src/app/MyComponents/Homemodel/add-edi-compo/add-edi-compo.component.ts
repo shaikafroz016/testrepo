@@ -13,6 +13,7 @@ export class AddEdiCompoComponent implements OnInit {
   @Input() lob!:string
   @Input() cre!:string
   updatedBy!:string
+  
   constructor(public service: NetApiService,
     private router: Router) { }
 

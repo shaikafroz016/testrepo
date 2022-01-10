@@ -10,24 +10,23 @@ import { NetApiService } from 'src/app/net-api.service';
 export class ShowCompoComponent implements OnInit {
     id!:number
     constructor(private service:NetApiService,private router: Router) { }
-  homels:any=[]
-  ngOnInit(): void {
-    this.refreshHomeLs();
-    
+    homels:any=[]
+    ngOnInit(): void {
+      this.refreshHomeLs();
+      
+    }
+    refreshHomeLs(){
+      this.service.getHome().subscribe(data=>{
+        this.homels=data;
+      });
   }
-refreshHomeLs(){
-  this.service.getHome().subscribe(data=>{
-    this.homels=data;
-  });
-}
-deletelob(id:number){
-  
-  this.service.deleteHome(id).subscribe(res => {
-    console.log('deletes  successfully!');
-    this.refreshHomeLs();
-  })
-}
-
+  deletelob(id:number){
+    
+    this.service.deleteHome(id).subscribe(res => {
+      console.log('deletes  successfully!');
+      this.refreshHomeLs();
+    })
+  }
 
 }
 

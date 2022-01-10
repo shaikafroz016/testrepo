@@ -12,10 +12,10 @@ export class EditComponent implements OnInit {
 
   id!: number;
   item!:any;
-  
+
   
   constructor(
-    public postService: NetApiService,
+    public service: NetApiService,
     private route: ActivatedRoute,
     private router: Router
   ) { }
@@ -29,14 +29,14 @@ export class EditComponent implements OnInit {
   
   getdata(){
     this.id = this.route.snapshot.params['LobcatId'];
-    this.postService.getbyid(this.id).subscribe(data=>{
+    this.service.getbyid(this.id).subscribe(data=>{
       this.item=data;
     });
   }   
 
   submit(){
     console.log();
-    this.postService.updateHome(this.item, this.id).subscribe(res => {
+    this.service.updateHome(this.item, this.id).subscribe(res => {
          console.log('Post updated successfully!');
          this.router.navigateByUrl('Lobcat');
     })
