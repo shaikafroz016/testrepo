@@ -10,12 +10,12 @@
     <label for="upd">Updated by</label>
     <input type="text" class="form-control" id="upd" name="upd" required [(ngModel)]="item.updatedBy">
   </div>
-  <div class="form-check"> 
-    <input type="checkbox" [checked]="item.isActive" (change)="item.isActive = !item.isActive">
-    <label class="form-check-label" for="act">Active</label>
+  <div  class="form-check"> 
+    <input style="height:17px;width: 17px;" type="checkbox" [checked]="item.isActive" (change)="item.isActive = !item.isActive">
+    <label style="padding-bottom: 2%;padding-left: 0.8%;" class="form-check-label" for="act">Active</label>
   </div>
-  <button type="submit" class="btn btn-success">Submit</button>
+  <button type="submit" style="width: 80px; height: 35px; background-color: #3399ff; border-color:rgb(51, 48, 48); color: black;">Submit</button>
   &nbsp;
-  <button routerLink="/Lobcat" type="button" class="btn btn-primary">Back</button>
+  <button routerLink="/Lobcat" type="button" style="width: 80px; height: 35px; background-color: #3399ff; border-color:rgb(51, 48, 48); color: black;">Back</button>
 </form>
 </div>
