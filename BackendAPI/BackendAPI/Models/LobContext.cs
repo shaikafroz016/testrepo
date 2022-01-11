@@ -14,5 +14,7 @@ namespace BackendAPI.Models
         }
         public DbSet<HomeModel> HomeModels { get; set; }
         public DbSet<LobCategory> LobCategories { get; set; }
+        public DbSet<Email> Emails { get; set; }
+        public DbSet<policyline> policylines { get; set; }
     }
 }

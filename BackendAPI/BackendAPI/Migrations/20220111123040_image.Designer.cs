@@ -4,14 +4,16 @@ using BackendAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BackendAPI.Migrations
 {
     [DbContext(typeof(LobContext))]
-    partial class LobContextModelSnapshot : ModelSnapshot
+    [Migration("20220111123040_image")]
+    partial class image
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -25,9 +27,6 @@ namespace BackendAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("ImageName")
-                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("body")
                         .HasColumnType("nvarchar(max)");
@@ -104,36 +103,6 @@ namespace BackendAPI.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("LobCategories");
-                });
-
-            modelBuilder.Entity("BackendAPI.Models.policyline", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<bool>("PC")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("app_details")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("desc")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("gob")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("isActive")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("pol_code")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("policylines");
                 });
 #pragma warning restore 612, 618
         }
