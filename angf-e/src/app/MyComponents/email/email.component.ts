@@ -20,22 +20,18 @@ export class EmailComponent implements OnInit {
   public uploader: FileUploader = new FileUploader({ url: uploadAPI, itemAlias: 'imageFile' });
   ngOnInit() {
     this.imgupload();
-    };
-    imgupload(){
-      this.uploader.onAfterAddingFile = (file) => { file.withCredentials = false; };
+  };
+  
+  imgupload(){
+    this.uploader.onAfterAddingFile = (file) => { file.withCredentials = false; };
     this.uploader.onCompleteItem = (item: any, response: any, status: any, headers: any) => {
-         console.log('FileUpload:uploaded successfully:', item, status, response);
-         alert('Your file has been uploaded successfully');
+        console.log('FileUpload:uploaded successfully:', item, status, response);
+        this.re=response;
+        alert('Your file has been uploaded successfully');
     }
   }
   
   submit(){
-    this.uploader.onAfterAddingFile = (file) => { file.withCredentials = false; };
-    this.uploader.onCompleteItem = (item: any, response: any, status: any, headers: any) => {
-         console.log('FileUpload:uploaded successfully:', item, status, response);
-         this.re=response;
-         alert('Your file has been uploaded successfully');
-    }
     const data={
       Id:7,
       subject_line:this.subl,
