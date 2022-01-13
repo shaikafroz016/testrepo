@@ -12,25 +12,33 @@ import { ShowDetailsComponent } from './MyComponents/show-details/show-details.c
 import { EditComponent } from './MyComponents/edit/edit.component';
 import { HomeComponent } from './MyComponents/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EmailComponent } from './MyComponents/email/email.component';
+import { FileSelectDirective, FileUploadModule } from 'ng2-file-upload';
 
 
 @NgModule({
+  
   declarations: [
     AppComponent,
+    
     ShowCompoComponent,
     AddEdiCompoComponent,
     AboutComponent,
     ShowDetailsComponent,
     EditComponent,
-    HomeComponent
+    HomeComponent,
+    EmailComponent,
+    
   ],
   imports: [
     BrowserModule,
+    
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FileUploadModule
   ],
   providers: [NetApiService],
   bootstrap: [AppComponent]

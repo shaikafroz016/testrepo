@@ -4,14 +4,16 @@ using BackendAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BackendAPI.Migrations
 {
     [DbContext(typeof(LobContext))]
-    partial class LobContextModelSnapshot : ModelSnapshot
+    [Migration("20220112143706_ss")]
+    partial class ss
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

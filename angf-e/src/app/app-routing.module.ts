@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './MyComponents/about/about.component';
 import { ContactComponent } from './MyComponents/contact/contact.component';
 import { EditComponent } from './MyComponents/edit/edit.component';
+import { EmailComponent } from './MyComponents/email/email.component';
 import { HomeComponent } from './MyComponents/home/home.component';
 import { AddEdiCompoComponent } from './MyComponents/Homemodel/add-edi-compo/add-edi-compo.component';
 import { ShowCompoComponent } from './MyComponents/Homemodel/show-compo/show-compo.component';
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path:"Lobcat/create",component:AddEdiCompoComponent,data: { animation: 'isLeft' }},
   {path:"Lobcat/:LobcatId/edit",component:EditComponent,data: { animation: 'isRight' }},
   {path:"about",component:AboutComponent},
-  {path:"contact",component:ContactComponent}
+  {path:"contact",component:ContactComponent},
+  {path:"email-template",component:EmailComponent}
 ];
 
 @NgModule({

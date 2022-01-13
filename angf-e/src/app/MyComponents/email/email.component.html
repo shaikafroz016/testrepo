@@ -1,0 +1,28 @@
+<div class="container" style="padding-top: 20%;">
+  <form (ngSubmit)="submit()">
+    <div class="mb-3">
+      <label for="subl" class="form-label">Subject Line</label>
+      <input type="text" class="form-control" id="subl" name="subl" [(ngModel)]="subl" >
+      
+    </div>
+    <div class="mb-3">
+      <label for="body" class="form-label">Body</label>
+      <input type="text" class="form-control" id="body" name="body" [(ngModel)]="body">
+    </div>
+    <div class="mb-3">
+      <label for="foo" class="form-label">Footer</label>
+      <input type="text" class="form-control" id="foo" name="foo" [(ngModel)]="foo">
+    </div>
+    <div class="mb-3">
+      <input type="file" name="file" ng2FileSelect [uploader]="uploader" accept=".png, .jpg, .jpeg"/>
+      <button type="button" class="btn btn-success btn-s" 
+    (click)="uploader.uploadAll()" 
+    [disabled]="!uploader.getNotUploadedItems().length" >
+        Upload
+  </button>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  
+  
+</div>
