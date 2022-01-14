@@ -18,7 +18,7 @@ const routes: Routes = [
   {path:"Lobcat/:LobcatId/edit",component:EditComponent,data: { animation: 'isRight' }},
   {path:"about",component:AboutComponent},
   {path:"contact",component:ContactComponent},
-  {path:"email-template",component:EmailComponent}
+  {path:"email-template",component:EmailComponent,data: { animation: 'isRight' }}
 ];
 
 @NgModule({

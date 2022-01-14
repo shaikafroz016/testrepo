@@ -83,7 +83,7 @@
 									</td>
 									<td> <a href="#" [routerLink]="['/Lobcat/', item.id, 'view']" > <i style="color: black;" class="fas fa-eye"></i></a>&nbsp;|&nbsp;<a href="#" [routerLink]="['/Lobcat/', item.id, 'edit']" > <i style="color: black;" class="fas fa-edit"></i></a>&nbsp;|&nbsp;<a (click)="deletelob(item.id)" > <i class="fas fa-trash-alt"></i></a></td>
 								  </tr>
-								  <a href="/email-template" >email</a>
+								  
 								  
 								
 								</tbody>
@@ -91,7 +91,7 @@
 								
 							  </table>
 		
-							
+							  <a routerLink="/email-template" >email</a>
 						  </div>
 					</div>
 				</div>

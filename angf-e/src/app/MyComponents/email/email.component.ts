@@ -14,14 +14,23 @@ export class EmailComponent implements OnInit {
   @Input() subl!:string
   @Input() body!:string
   @Input() foo!:string
+  id!:number
   re!:any
   constructor(private imageService : NetApiService,private router: Router) { }
   title = 'email template';
   public uploader: FileUploader = new FileUploader({ url: uploadAPI, itemAlias: 'imageFile' });
   ngOnInit() {
     this.imgupload();
+    this.getid();
   };
-  
+  getid(){
+    this.imageService.getEmailt().subscribe(res=>{
+      for(let x of res){
+        this.id=x.id
+      }
+      console.log(this.id)
+    })
+  }
   imgupload(){
     this.uploader.onAfterAddingFile = (file) => { file.withCredentials = false; };
     this.uploader.onCompleteItem = (item: any, response: any, status: any, headers: any) => {
@@ -33,7 +42,7 @@ export class EmailComponent implements OnInit {
   
   submit(){
     const data={
-      Id:7,
+      Id:this.id,
       subject_line:this.subl,
       body:this.body,
       footer:this.foo,
@@ -43,7 +52,7 @@ export class EmailComponent implements OnInit {
       alert("please upload image")
     }
     else{
-      this.imageService.emailput(7,data).subscribe(res=>{
+      this.imageService.emailput(this.id,data).subscribe(res=>{
       
         console.log("updated sussess");
         this.router.navigateByUrl('Lobcat');
