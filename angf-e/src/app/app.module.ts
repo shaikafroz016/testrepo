@@ -14,6 +14,7 @@ import { HomeComponent } from './MyComponents/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EmailComponent } from './MyComponents/email/email.component';
 import { FileSelectDirective, FileUploadModule } from 'ng2-file-upload';
+import { BillingInstructComponent } from './Mycomponents/billing-instruct/billing-instruct.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { FileSelectDirective, FileUploadModule } from 'ng2-file-upload';
     EditComponent,
     HomeComponent,
     EmailComponent,
+    BillingInstructComponent,
     
   ],
   imports: [

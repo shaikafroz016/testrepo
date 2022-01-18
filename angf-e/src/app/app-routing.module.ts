@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './MyComponents/about/about.component';
+import { BillingInstructComponent } from './Mycomponents/billing-instruct/billing-instruct.component';
 import { ContactComponent } from './MyComponents/contact/contact.component';
 import { EditComponent } from './MyComponents/edit/edit.component';
 import { EmailComponent } from './MyComponents/email/email.component';
@@ -12,6 +13,7 @@ import { ShowDetailsComponent } from './MyComponents/show-details/show-details.c
 const routes: Routes = [
   {path:"",redirectTo: 'Home', pathMatch: 'full'},
   {path:"Home",component:HomeComponent},
+  {path:"billing-instruction",component:BillingInstructComponent},
   {path:"Lobcat",component:ShowCompoComponent},
   {path:"Lobcat/:LobcatId/view",component:ShowDetailsComponent,data: { animation: 'isRight' }},
   {path:"Lobcat/create",component:AddEdiCompoComponent,data: { animation: 'isLeft' }},

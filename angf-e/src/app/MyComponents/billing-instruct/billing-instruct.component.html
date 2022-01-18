@@ -1,0 +1,18 @@
+<div style="padding-top: 20%;padding-left: 20%;">
+    <p>Works</p>    
+    <p>{{item.id}}</p>
+    <p>{{item.client_name}}</p>
+    <p>{{item.code}}</p>
+    --------------------------------
+    <div *ngFor="let x of item.client_inv_del.$values">
+        instr_level<p>{{x.inv_delivery.instr_level}}</p>
+        s_id<p>{{x.inv_delivery.s_id}}</p>
+        agency_code<p>{{x.inv_delivery.agency_code}}</p>
+        contact_name<p>{{x.inv_delivery.contact_name}}</p>
+        glob<p>{{x.inv_delivery.glob}}</p>
+       desc <p>{{x.inv_delivery.desc}}</p>
+       updated_by <p>{{x.inv_delivery.updated_by}}</p>
+        
+        --------------------------------
+    </div>
+</div>

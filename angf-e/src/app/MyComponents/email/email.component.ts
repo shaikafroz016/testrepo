@@ -21,16 +21,9 @@ export class EmailComponent implements OnInit {
   public uploader: FileUploader = new FileUploader({ url: uploadAPI, itemAlias: 'imageFile' });
   ngOnInit() {
     this.imgupload();
-    this.getid();
+    this.id=1;
   };
-  getid(){
-    this.imageService.getEmailt().subscribe(res=>{
-      for(let x of res){
-        this.id=x.id
-      }
-      console.log(this.id)
-    })
-  }
+  
   imgupload(){
     this.uploader.onAfterAddingFile = (file) => { file.withCredentials = false; };
     this.uploader.onCompleteItem = (item: any, response: any, status: any, headers: any) => {
