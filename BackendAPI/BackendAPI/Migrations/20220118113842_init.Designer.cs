@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BackendAPI.Migrations
 {
     [DbContext(typeof(LobContext))]
-    [Migration("20220109193938_up")]
-    partial class up
+    [Migration("20220118113842_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,6 +20,33 @@ namespace BackendAPI.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.12")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("BackendAPI.Models.Email", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ImageName")
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("ImageSrc")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("body")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("footer")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("subject_line")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Emails");
+                });
 
             modelBuilder.Entity("BackendAPI.Models.HomeModel", b =>
                 {
@@ -31,7 +58,7 @@ namespace BackendAPI.Migrations
                     b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("CreatedOn")
+                    b.Property<DateTime?>("CreatedOn")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Summary")
@@ -40,7 +67,7 @@ namespace BackendAPI.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("UpdatedOn")
+                    b.Property<DateTime?>("UpdatedOn")
                         .HasColumnType("datetime2");
 
                     b.Property<Guid>("UpdatedWith")
@@ -61,7 +88,7 @@ namespace BackendAPI.Migrations
                     b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("CreatedOn")
+                    b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
 
                     b.Property<bool>("IsActive")
@@ -82,6 +109,36 @@ namespace BackendAPI.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("LobCategories");
+                });
+
+            modelBuilder.Entity("BackendAPI.Models.policyline", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("PC")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("app_details")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("desc")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("gob")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("isActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("pol_code")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("policylines");
                 });
 #pragma warning restore 612, 618
         }
