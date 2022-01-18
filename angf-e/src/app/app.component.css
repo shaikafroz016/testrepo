@@ -88,7 +88,6 @@ p{
 .wrapper .top_navbar .top_menu .logo{
   color: black;
   font-size: 20px;
-  font-family: "Times New Roman";
   
   letter-spacing: 1px;
   text-align: left;
@@ -113,8 +112,8 @@ p{
   display: block;
   /*margin: 0 0px;*/
   /*width: 35px;*/
-  height: 35px;
-  line-height: 35px;
+  height: 45px;
+  line-height: 45px;
   text-align: right;
   /*border: 1px solid #2e4ead;*/
   /*border-radius: 50%;*/
@@ -190,15 +189,6 @@ p{
 
 
 
-.wrapper .main_container{
-  /*width: (100% - 200px);
-  margin-top: 0px;
-  margin-left: 80px;
-  padding: 50px;
-  margin-right: 0px;
-  transition: all 0.3s ease;*/
-  font-family: "Times New Roman";
-}
 
 .wrapper .main_container .item1{
   background: #dedede;
