@@ -17,7 +17,7 @@ export class BillingInstructComponent implements OnInit {
     
   }
   getdata(){
-    this.service.getclientbyid(1).subscribe(res=>{
+    this.service.getclientbyid(4).subscribe(res=>{
       this.item=res;
     })
     

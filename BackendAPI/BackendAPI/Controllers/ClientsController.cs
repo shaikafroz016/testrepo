@@ -42,18 +42,24 @@ namespace BackendAPI.Controllers
         // PUT: api/Clients/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutClient(int id, Client client)
+        public async Task<IActionResult> PutClient(int id,inv_delivery client)
         {
-            if (id != client.Id)
-            {
-                return BadRequest();
-            }
+            
+            _context.inv_Deliveries.Add(client);
+            await _context.SaveChangesAsync();
 
-            _context.Entry(client).State = EntityState.Modified;
-
+            var x= _context.inv_Deliveries.Find(client.Id).Id;
             try
             {
                 await _context.SaveChangesAsync();
+
+                var obj = new client_inv_del
+                {
+                    ClientId = id,
+                    inv_deliveryId = x
+                };
+                _context.client_Inv_Dels.Add(obj);
+                _context.SaveChanges();
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -66,8 +72,8 @@ namespace BackendAPI.Controllers
                     throw;
                 }
             }
-
-            return NoContent();
+            
+            return Ok();
         }
 
         // POST: api/Clients
@@ -78,7 +84,7 @@ namespace BackendAPI.Controllers
             _context.Clients.Add(client);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetClient", new { id = client.Id }, client);
+            return Ok();
         }
 
         // DELETE: api/Clients/5
