@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { NetApiService } from 'src/app/net-api.service';
+import { NetApiService } from 'src/app/Services/net-api.service';
 
 @Component({
   selector: 'app-add-edi-compo',

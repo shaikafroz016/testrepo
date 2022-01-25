@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { NetApiService } from 'src/app/net-api.service';
+import { NetApiService } from 'src/app/Services/net-api.service';
 @Component({
   selector: 'app-show-compo',
   templateUrl: './show-compo.component.html',

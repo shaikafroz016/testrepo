@@ -2,7 +2,8 @@ import { HttpClient, HttpEventType } from '@angular/common/http';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { FileUploader } from 'ng2-file-upload';
-import { NetApiService } from 'src/app/net-api.service';
+import { NetApiService } from 'src/app/Services/net-api.service';
+
 const uploadAPI  = 'https://localhost:44375/api/Image/upload';
 
 @Component({

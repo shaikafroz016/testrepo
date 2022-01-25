@@ -7,14 +7,16 @@ import { ShowCompoComponent } from './MyComponents/Homemodel/show-compo/show-com
 import { AddEdiCompoComponent } from './MyComponents/Homemodel/add-edi-compo/add-edi-compo.component';
 import { AboutComponent } from './MyComponents/about/about.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NetApiService } from './net-api.service';
+import { NetApiService } from './Services/net-api.service';
 import { ShowDetailsComponent } from './MyComponents/show-details/show-details.component';
 import { EditComponent } from './MyComponents/edit/edit.component';
 import { HomeComponent } from './MyComponents/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EmailComponent } from './MyComponents/email/email.component';
 import { FileSelectDirective, FileUploadModule } from 'ng2-file-upload';
-import { BillingInstructComponent } from './Mycomponents/billing-instruct/billing-instruct.component';
+import { BillingInstructComponent } from './MyComponents/billing_ins/billing-instruct/billing-instruct.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { FinalDataComponent } from './MyComponents/billing_ins/final-data/final-data.component';
 
 
 @NgModule({
@@ -30,11 +32,14 @@ import { BillingInstructComponent } from './Mycomponents/billing-instruct/billin
     HomeComponent,
     EmailComponent,
     BillingInstructComponent,
+    FinalDataComponent,
+    
+   
     
   ],
   imports: [
     BrowserModule,
-    
+    DragDropModule, 
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,

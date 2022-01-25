@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { NetApiService } from 'src/app/net-api.service';
+import { NetApiService } from 'src/app/Services/net-api.service';
+
 
 @Component({
   selector: 'app-edit',

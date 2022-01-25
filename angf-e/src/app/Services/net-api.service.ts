@@ -44,10 +44,7 @@ export class NetApiService {
    emailput(id:number,data:any){
      return this.http.put(this.netapiUrl+`/api/Image/${id}`,data);
    }
-   //client
-   getclientbyid(id:number):Observable<any>{
-     return this.http.get(this.netapiUrl+`/api/Clients/${id}`)
-   }
+   
 }
 interface home {
   lobCategoryName: string;

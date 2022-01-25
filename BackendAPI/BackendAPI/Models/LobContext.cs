@@ -33,5 +33,6 @@ namespace BackendAPI.Models
         public DbSet<inv_delivery> inv_Deliveries { get; set; }
         public DbSet<Client> Clients { get; set; }
         public DbSet<client_inv_del> client_Inv_Dels { get; set; }
+        public DbSet<Glob> Globs { get; set; }
     }
 }
