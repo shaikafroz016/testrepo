@@ -36,6 +36,9 @@ export class BillingInstructComponent implements OnInit {
     this.obj=this.cli_li.$values.find((z: { client_name: string; })=>z.client_name==this.c_name)
     
   }
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({behavior: 'smooth'});
+}
   loading(id:number){
     this.getdata(id)
   }

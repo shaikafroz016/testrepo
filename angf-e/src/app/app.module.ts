@@ -17,6 +17,8 @@ import { FileSelectDirective, FileUploadModule } from 'ng2-file-upload';
 import { BillingInstructComponent } from './MyComponents/billing_ins/billing-instruct/billing-instruct.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { FinalDataComponent } from './MyComponents/billing_ins/final-data/final-data.component';
+import { AddeditComponent } from './MyComponents/billing_ins/addedit/addedit.component';
+import { DragdropComponent } from './MyComponents/billing_ins/dragdrop/dragdrop.component';
 
 
 @NgModule({
@@ -33,6 +35,8 @@ import { FinalDataComponent } from './MyComponents/billing_ins/final-data/final-
     EmailComponent,
     BillingInstructComponent,
     FinalDataComponent,
+    AddeditComponent,
+    DragdropComponent,
     
    
     
